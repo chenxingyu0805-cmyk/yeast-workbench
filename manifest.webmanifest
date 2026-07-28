@@ -1,0 +1,10 @@
+{
+  "name": "yeast-workbench",
+  "short_name": "酵母工作台",
+  "description": "酵母底盘优化与菌株构建实验工作台（本地离线）",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#2f7d4f",
+  "icons": []
+}
