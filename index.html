@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>酵母工作台 · Yeast Workbench</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🧫</span>
+      <div>
+        <div class="brand-title">酵母工作台</div>
+        <div class="brand-sub">Yeast Chassis &amp; Strain Workbench</div>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <button class="nav-btn active" data-view="strains">菌株 / 底盘库</button>
+      <button class="nav-btn" data-view="eln">实验记录 ELN</button>
+      <button class="nav-btn" data-view="cloning">克隆 &amp; 引物工具</button>
+      <button class="nav-btn" data-view="backup">数据备份</button>
+    </nav>
+    <div class="topbar-right" id="dbStatus">本地存储：就绪</div>
+  </header>
+
+  <main id="app" class="app"><!-- 视图挂载点 --></main>
+
+  <!-- 模态框容器 -->
+  <div id="modalRoot" class="modal-root hidden"></div>
+
+  <script src="js/seqcore.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/strains.js"></script>
+  <script src="js/eln.js"></script>
+  <script src="js/cloning.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
