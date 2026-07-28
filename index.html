@@ -20,24 +20,26 @@
     <div class="appbar-status" id="dbStatus">本地存储：就绪</div>
   </header>
 
-  <!-- 主内容（仅此区域滚动） -->
-  <main id="app" class="app"><!-- 视图挂载点 --></main>
+  <!-- 主体：左侧导航 + 右侧内容 -->
+  <div class="body-row">
+    <aside class="sidebar" id="nav">
+      <button class="tab-btn active" data-view="strains">
+        <span class="tab-ico">🧫</span><span class="tab-lbl">菌株</span>
+      </button>
+      <button class="tab-btn" data-view="eln">
+        <span class="tab-ico">📓</span><span class="tab-lbl">实验</span>
+      </button>
+      <button class="tab-btn" data-view="cloning">
+        <span class="tab-ico">🔧</span><span class="tab-lbl">工具</span>
+      </button>
+      <button class="tab-btn" data-view="backup">
+        <span class="tab-ico">💾</span><span class="tab-lbl">备份</span>
+      </button>
+    </aside>
 
-  <!-- 底部标签栏（原生 App 形态） -->
-  <nav class="tabbar" id="nav">
-    <button class="tab-btn active" data-view="strains">
-      <span class="tab-ico">🧫</span><span class="tab-lbl">菌株</span>
-    </button>
-    <button class="tab-btn" data-view="eln">
-      <span class="tab-ico">📓</span><span class="tab-lbl">实验</span>
-    </button>
-    <button class="tab-btn" data-view="cloning">
-      <span class="tab-ico">🔧</span><span class="tab-lbl">工具</span>
-    </button>
-    <button class="tab-btn" data-view="backup">
-      <span class="tab-ico">💾</span><span class="tab-lbl">备份</span>
-    </button>
-  </nav>
+    <!-- 主内容（仅此区域滚动） -->
+    <main id="app" class="app"><!-- 视图挂载点 --></main>
+  </div>
 
   <!-- 模态框容器 -->
   <div id="modalRoot" class="modal-root hidden"></div>
