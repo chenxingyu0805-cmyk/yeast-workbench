@@ -59,7 +59,7 @@
 
   /* ---------- 路由 ---------- */
   function go(view) {
-    document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.view === view));
     const app = document.getElementById('app');
     (Views[view] || Views.strains).render(app);
   }
@@ -75,7 +75,7 @@
       navigator.serviceWorker.register('sw.js').catch(() => {});
     }
     document.getElementById('nav').onclick = e => {
-      const btn = e.target.closest('.nav-btn'); if (!btn) return;
+      const btn = e.target.closest('.tab-btn'); if (!btn) return;
       go(btn.dataset.view);
     };
     go('strains');
