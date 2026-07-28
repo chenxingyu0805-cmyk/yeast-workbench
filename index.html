@@ -2,30 +2,42 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="酵母工作台" />
+  <meta name="theme-color" content="#2f7d4f" />
   <title>酵母工作台 · Yeast Workbench</title>
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="logo">🧫</span>
-      <div>
-        <div class="brand-title">酵母工作台</div>
-        <div class="brand-sub">Yeast Chassis &amp; Strain Workbench</div>
-      </div>
-    </div>
-    <nav class="nav" id="nav">
-      <button class="nav-btn active" data-view="strains">菌株 / 底盘库</button>
-      <button class="nav-btn" data-view="eln">实验记录 ELN</button>
-      <button class="nav-btn" data-view="cloning">克隆 &amp; 引物工具</button>
-      <button class="nav-btn" data-view="backup">数据备份</button>
-    </nav>
-    <div class="topbar-right" id="dbStatus">本地存储：就绪</div>
+  <!-- 顶部应用栏 -->
+  <header class="appbar">
+    <div class="appbar-brand"><span class="logo">🧫</span><span>酵母工作台</span></div>
+    <div class="appbar-status" id="dbStatus">本地存储：就绪</div>
   </header>
 
+  <!-- 主内容（仅此区域滚动） -->
   <main id="app" class="app"><!-- 视图挂载点 --></main>
+
+  <!-- 底部标签栏（原生 App 形态） -->
+  <nav class="tabbar" id="nav">
+    <button class="tab-btn active" data-view="strains">
+      <span class="tab-ico">🧫</span><span class="tab-lbl">菌株</span>
+    </button>
+    <button class="tab-btn" data-view="eln">
+      <span class="tab-ico">📓</span><span class="tab-lbl">实验</span>
+    </button>
+    <button class="tab-btn" data-view="cloning">
+      <span class="tab-ico">🔧</span><span class="tab-lbl">工具</span>
+    </button>
+    <button class="tab-btn" data-view="backup">
+      <span class="tab-ico">💾</span><span class="tab-lbl">备份</span>
+    </button>
+  </nav>
 
   <!-- 模态框容器 -->
   <div id="modalRoot" class="modal-root hidden"></div>
